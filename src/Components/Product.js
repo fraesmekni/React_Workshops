@@ -1,33 +1,32 @@
 import Button from 'react-bootstrap/Button';
+import React , {Component} from "react";
+import ReactDOM from 'react-dom/client';
 import Card from 'react-bootstrap/Card';
 import placeholder from '../assets/images/placeholder.jpg';
+import products from '../assets/products';
+import Products from './Products.css'
 
-function Aard(props) {
-  return (
-    <>
-    {props.name}
-    {props.price}
-    {props.like}
-    {props.quantity}
-    {props.img}
-    {props.description}
-    </>
-    );
-}
-function Cardd(props){
-  return (
+
+
+
+
+
+
+export default function Product(props){
+  return(
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={placeholder} />
+      <div className='card'>
+      <Card.Img variant="top" src={require("../assets/images/"+props.img)} />
       <Card.Body>
-        <Card.Title>Lenovo</Card.Title>
+        <Card.Title className='title'>{props.title}</Card.Title>
         <Card.Text>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit alias pariatur unde! Quia aliquid tempora blanditiis saepe facere tempore itaque dolorum eum! Doloremque, nulla recusandae. Ducimus itaque harum possimus corporis.
-          </Card.Text>
-        
-        <Button variant="primary">Go somewhere</Button>
+          {props.description}
+        </Card.Text>
+        <Card.Text>
+          {props.price}
+        </Card.Text>
       </Card.Body>
+      </div>
     </Card>
-  );
-}
-
-export default Cardd;
+  )
+};

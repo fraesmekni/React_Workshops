@@ -1,7 +1,7 @@
-[
+const products=[
     {
       "name": "PC Lenovo",
-      "price": "1400",
+      "price": "1400",  
       "img": "product1.webp",
       "like":0,
       "quantity":10,
@@ -25,4 +25,5 @@
     }
   ]
 
+  export default products 
   

@@ -1,5 +1,8 @@
 .box{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin: 40px;
+}
+.title{
+    margin-left:0;
 }
